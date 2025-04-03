@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools", "wheel", "torch"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "torch-cpp-demo"
+version = "0.1.0"
+description = "A PyTorch extension with CUDA support."
+authors = [{ name = "Your Name", email = "your.email@example.com" }]
+readme = "README.md"
+
+[project.dependencies]
+torch = "^2.6.0"
+
+[project.optional-dependencies]
+dev = [
+    "ruff",
+    "pytest",
+    "black",
+    "isort"
+]
+
+[tool.setuptools]
+packages = ["torch_cpp_demo"]
+
+[tool.setuptools.extension]
+c_sources = ["csrc/extension.cpp"]
+cuda_sources = ["csrc/kernel.cu"]
