@@ -12,11 +12,7 @@ We like using `uv` ([&rarr; installation](https://docs.astral.sh/uv/#installatio
 We are also using torch nightly, please change the extra-index to match your cuda install.
 
 ### run the example 
-If you aren't in the venv:
-```
-uv run demo.py
-```
-otherwise just 
+Inside the venv run
 ```
 python demo.py
 ```
