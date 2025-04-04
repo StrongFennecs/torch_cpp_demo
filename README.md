@@ -8,7 +8,7 @@ A machine with a nvidia gpu, and the nvidia toolkit installed for the nvidia cud
 
 ### setup
 
-We like using `uv` ([&rarr installation](https://docs.astral.sh/uv/#installation)) . `uv venv` to create a virtual env, and then run `uv pip install -e .`
+We like using `uv` ([&rarr; installation](https://docs.astral.sh/uv/#installation)) . `uv venv` to create a virtual env, and then run `uv pip install -e .`
 
 ### how to call c++ 
 
