@@ -9,10 +9,16 @@ A machine with a nvidia gpu, and the nvidia toolkit installed for the nvidia cud
 ### setup
 
 We like using `uv` ([&rarr; installation](https://docs.astral.sh/uv/#installation)) . `uv venv` to create a virtual env, and then run `uv pip install .`
+We are also using torch nightly, please change the extra-index to match your cuda install.
 
 ### run the example 
+If you aren't in the venv:
 ```
 uv run demo.py
+```
+otherwise just 
+```
+python demo.py
 ```
 
 ### how to call c++ quick primer
