@@ -8,7 +8,7 @@ version = "0.1.0"
 description = "A PyTorch extension with CUDA support."
 authors = [{ name = "Your Name", email = "your.email@example.com" }]
 readme = "README.md"
-dependencies =  [ "torch>2.5.0", "ninja"]
+dependencies =  [ "torch", "ninja"]
 
 [project.optional-dependencies]
 dev = [
@@ -17,6 +17,9 @@ dev = [
     "black",
     "isort"
 ]
+
+[tool.uv.pip]
+extra-index-url = ["https://download.pytorch.org/whl/nightly/cu128"]
 
 [tool.setuptools]
 packages = ["torch_cpp_demo"]

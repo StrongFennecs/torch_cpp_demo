@@ -20,7 +20,7 @@ if torch.cuda.is_available():
     
     ext_modules.append(
         CUDAExtension(
-            name="extension._C",
+            name="extension",
             sources=[
                 "csrc/extension.cpp",
                 "csrc/add.cu",

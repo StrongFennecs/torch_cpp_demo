@@ -1,9 +1,9 @@
-
 import torch
-from torch_cpp_demo import extension
+# the module defined in setup.py
+from extension import add 
 
-def cuda_add(a, b):
-    output_tensor = torch.empty_like(a)
-    extension.add(a, b, output_tensor)
-    return output_tensor
+def custom_add(a, b):
+    # can call your extension
+    return add(a, b)
+
 

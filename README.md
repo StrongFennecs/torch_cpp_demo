@@ -1,6 +1,6 @@
 ## torch cpp demo
 
-An example template repository to get you setup building c++ extensions in pytorch.
+An example template repository to get you setup building c++ extensions in pytorch, using pybind, pyprojects and cuda.
 
 ### requirements
 
@@ -8,9 +8,16 @@ A machine with a nvidia gpu, and the nvidia toolkit installed for the nvidia cud
 
 ### setup
 
-We like using `uv` ([&rarr; installation](https://docs.astral.sh/uv/#installation)) . `uv venv` to create a virtual env, and then run `uv pip install -e .`
+We like using `uv` ([&rarr; installation](https://docs.astral.sh/uv/#installation)) . `uv venv` to create a virtual env, and then run `uv pip install .`
 
-### how to call c++ 
+### run the example 
+```
+uv run demo.py
+```
+
+### how to call c++ quick primer
+
+In contrast to the pytorch example [0] we are using pybind to make the python / c++ interoprate. This is just because we want this to be a bit more generic for other c++ projects.
 
 To write cuda extension first you need a c++ file (for example `csrc/extension.cpp`) which defines the functions that will be called from python. These c++ functions get bound to python functions with `pybind11`. 
 
@@ -23,4 +30,4 @@ The pytorch cpp_extension package is used to build the c++ sources with a c++ co
 
 More detail can be found here:
 
-https://pytorch.org/tutorials/advanced/cpp_extension.html#writing-a-mixed-c-cuda-extension
+[0] https://pytorch.org/tutorials/advanced/cpp_extension.html#writing-a-mixed-c-cuda-extension
