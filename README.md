@@ -16,7 +16,8 @@ To write cuda extension first you need a c++ file (for example `csrc/extension.c
 
 In this example, the functions defined in `extension.cpp` serve as forward declarations of functions that are defined in cuda (`*.cu`) files. In this example repo the cuda code in eg `add.cu`. It's good practice for the c++ functions to do some checks and then forward its calls to the cuda functions. The cuda `*.cu` files contains the actual cuda kernels. 
 
-python &rarr; pybind11 &rarr; extension.cpp &larr; forward declares &larr; add.cu
+| python &rarr; pybind11 &rarr; extension.cpp &rarr; forward declares &rarr; add.cu |
+| --------------------------------------------------------------------------------- |
 
 The pytorch cpp_extension package is used to build the c++ sources with a c++ compiler and the cuda sources with nvcc. 
 
