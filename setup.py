@@ -23,7 +23,7 @@ if torch.cuda.is_available():
             name="extension._C",
             sources=[
                 "csrc/extension.cpp",
-                "csrc/kernel.cu",
+                "csrc/add.cu",
             ],
             extra_compile_args={
                 "cxx": ["-O3"],
